@@ -6,7 +6,9 @@
         - Làm 1 việc cụ thể
     2. Loại hàm 
         - Built-in
-        - Tự định nghĩa
+        - Declaration 
+        - Expression 
+        - Arrow
     3. Tính chất 
         - Không thực thi khi định nghĩa 
         - Thực thi khi được gọi
@@ -24,6 +26,26 @@ helloWorld(); // Cách gọi hàm , và sau khi hàm được gọi thì sẽ th
 // Hàm có chứa tham số và trả về giá trị 
 function mySum(a, b) {
     return a * b;
-}
+} 
 
 mySum(2,6); 
+
+
+// Declaration funtion
+function autoLogin() {
+    console.log("Declaration function");
+}
+autoLogin();
+
+// Expression function
+var showMessage = function() {
+    console.log("Expression function");
+}
+showMessage();
+
+// Arrow function 
+autoLogin = () => {
+    console.log("Arrow function");
+}
+
+autoLogin();

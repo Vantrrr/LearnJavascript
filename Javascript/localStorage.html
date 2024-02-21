@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The localStorage Js</h2>
+
+
+<script>
+
+if(typeof localStorage !== undefined) {
+    // Set Item
+    localStorage.name = 'Van';
+    localStorage.setItem('age', 23);
+    localStorage.class = 'DC20';
+    var age = localStorage.getItem('age');
+    console.log('Name: ' + localStorage.getItem('name'));
+    console.log('Age: ' + age);
+    console.log('Class: ' + localStorage.getItem('class'));
+
+    var long = localStorage.length;
+    console.log(long);
+
+
+
+
+
+} else {
+    alert("Trình duyệt không hỗ trợ localStorage !")
+}
+
+
+
+
+</script>
+
+</body>
+</html>

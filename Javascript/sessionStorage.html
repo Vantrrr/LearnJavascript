@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The sessionStorage Js</h2>
+
+
+<script>
+
+if ( typeof(Storage) !== 'undefined') {
+    // Khởi tạo sesionStorage
+    sessionStorage.setItem('name', 'Van');
+    // get sessionStorage
+    sessionStorage.getItem('name');
+    // lấy ra số lượng session đã lưu trữ
+    sessionStorage.length;
+    // xóa 1 item localStorage
+    //sessionStorage.removeItem('name');
+    // xóa tất cả item trong sessionStorage
+    //sessionStorage.clear();
+} else {
+    alert('Trình duyệt của bạn không hỗ trợ!');
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

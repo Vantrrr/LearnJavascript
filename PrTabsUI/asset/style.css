@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body > div {
+    margin: 50px auto 0;
+    max-width: 720px;
+  }
+
+.tab {
+    display: flex;
+    position: relative;
+}
+
+.tab-item {
+    margin: 20px 30px;
+    font-size: 20px;
+    padding: 15px;
+    color: #c23564;
+}
+
+.tab-item:hover {
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgb(160, 153, 150);
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}

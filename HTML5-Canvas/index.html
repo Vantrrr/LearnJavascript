@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML canvas</title>
+</head>
+<body>
+    <div>
+        <img src="./assets/img/canvas.png" alt="">
+    </div>
+    <!-- Cấu trúc của 1 canvas -->
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
+
+    <section>
+        <input type="button" value="Vẽ đường thẳng" onclick="veDuongThang()"></input>
+        <input type="button" value="Vẽ hình CN" onclick="veHinhChuNhat()"></input>
+        <input type="button" value="Vẽ gradient HCN" onclick="gradientHCN()"></input>
+        <input type="button" value="Vẽ hình tròn" onclick="veHinhTron()"></input>
+        <input type="button" value="Vẽ text" onclick="veText()"></input>
+
+    </section>
+
+    
+</body>
+<script>
+    function veDuongThang() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        context.moveTo(50,100); // Khai báo điểm đầu
+        context.lineTo(50,0); // Khai báo điểm cuối
+        context.lineWidth = 5; // Khai báo độ rộng của đường thẳng
+        context.strokeStyle = "#FF0000" // Khai báo màu của đường thẳng
+        context.stroke(); // Thực hiện vẽ
+    }
+
+    function veHinhChuNhat() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        context.lineWidth = 5;
+        context.strokeStyle = "#FF0000" // Khai báo màu của đường thẳng
+        context.strokeRect(100,50,200,100); // Tọa độ xy, width, height 
+        context.fillStyle = "#ccc" // Màu nền   
+        context.fillRect(100,50,200,100) // xy, width, height
+    }
+
+    function gradientHCN() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        // Create gradient
+        var grd = context.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        // Fill with gradient
+        context.fillStyle = grd;
+        context.fillRect(10, 10, 150, 80);
+    }
+
+    function veHinhTron() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        context.beginPath();
+        context.arc(95, 50, 40, 0, 2 * Math.PI); // x,y, radius bán kính, startAngle: góc bắt đầu , enAngle: góc kết thúc.
+        context.stroke();
+    }
+
+    function veText() {
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        context.font = "30px Arial";
+        context.fillText("Hello World", 10, 50); // Text,x,y
+    }
+
+
+</script>
+</html>

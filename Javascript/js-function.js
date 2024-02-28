@@ -47,5 +47,4 @@ showMessage();
 autoLogin = () => {
     console.log("Arrow function");
 }
-
 autoLogin();

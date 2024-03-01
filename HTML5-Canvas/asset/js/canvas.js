@@ -1,6 +1,6 @@
 let canvas = document.querySelector('canvas');
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let c = canvas.getContext('2d');
 
 function veDuongThang() {
@@ -92,18 +92,29 @@ function drawBezierCurves() {
 }
 
 // Animate
-var x = 200;
+var x = 200, y = 200;
+var dx = 4 , dy = 4;
+var radius = 30;
 function Animate() {
     requestAnimationFrame(Animate);
     c.beginPath();
-    c.arc(x, 200, 30, 0, Math.PI * 2, false);
+    c.arc(x, y, radius, 0, Math.PI * 2, false);
     c.strokeStyle = 'blue';
     c.fillStyle = "#ccc";
     c.clearRect(0, 0, innerWidth, innerHeight);
     // c.fill();
     
     c.stroke();
+    if(x + radius > innerWidth || x - radius < 0) {
+        dx = -dx;
+    }
 
-    x += 1;
+    if(y + radius > innerHeight || y - radius < 0) {
+        dy = -dy;
+    }
+
+    x += dx;
+    y += dy;
+
 }
 

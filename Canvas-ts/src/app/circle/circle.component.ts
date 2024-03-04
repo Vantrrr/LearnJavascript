@@ -12,18 +12,19 @@ export class CircleComponent {
     const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
     const context = canvas.getContext('2d');
     if(context) {
-      this.#drawRectangle(context);
-      this.#drawTriangle(context);
+      this.drawRectangle(context);
+      this.drawTriangle(context);
     }
   }
 
-  #drawRectangle(context: CanvasRenderingContext2D) {
+
+  drawRectangle(context: CanvasRenderingContext2D) {
     context.fillRect(20, 20, 100, 100);
     context.clearRect(40, 40, 30, 30);
     context.strokeRect(50, 50, 10, 10);
   }
 
-  #drawTriangle(context: CanvasRenderingContext2D) {
+  drawTriangle(context: CanvasRenderingContext2D) {
     context.beginPath();
     context.moveTo(200,70);
     context.lineTo(300,20);

@@ -7,6 +7,7 @@ import { CircleComponent } from './circle/circle.component';
 import { DrawImageComponent } from './draw-image/draw-image.component';
 import { StateCanvasComponent } from './state-canvas/state-canvas.component';
 import { AnimationsComponent } from './animations/animations.component';
+import { TransformationComponent } from './transformation/transformation.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AnimationsComponent } from './animations/animations.component';
     CircleComponent,
     DrawImageComponent,
     StateCanvasComponent,
-    AnimationsComponent
+    AnimationsComponent,
+    TransformationComponent
   ],
   imports: [
     BrowserModule,

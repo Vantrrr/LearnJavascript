@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, } from '@angular/core';
+import { Component, ViewChild, ElementRef, } from '@angular/core';
 
 @Component({
   selector: 'app-state-canvas',
@@ -6,36 +6,36 @@ import { Component, OnInit, ViewChild, ElementRef, } from '@angular/core';
   styleUrls: ['./state-canvas.component.scss']
 })
 export class StateCanvasComponent {
-  @ViewChild('canvas', {static : true}) myCanvas!:ElementRef;
-  ngOnInit() {
-    const canvas: HTMLCanvasElement = this.myCanvas.nativeElement;
-    const context = canvas.getContext('2d');
+  @ViewChild('canvas', { static: true }) myCanvas!: ElementRef;
+  private context!: CanvasRenderingContext2D;
+  private canvas!: HTMLCanvasElement;
 
-    if(context) {
-      this.stateDrawCircle(context);
+  ngAfterViewInit() {
+    this.canvas = this.myCanvas.nativeElement;
+    this.context = this.canvas.getContext('2d')!;
+
+    if(this.context) {
+    this.stateDrawCircle();
     }
   }
 
-  stateDrawCircle(context: CanvasRenderingContext2D) {
+  stateDrawCircle() {
+    this.context.fillStyle = "red";
+    this.context.beginPath();
+    this.context.arc(50, 50, 30, 0, 2 * Math.PI);
+    this.context.fill();
 
-    context.fillStyle = "red";
-    context.beginPath();
-    context.arc(50, 50, 30, 0, 2 * Math.PI);
-    context.fill();
-
-    context.save();
-
-
-    context.fillStyle = "blue";
-    context.beginPath();
-    context.arc(150, 50, 30, 0, 2 * Math.PI);
-    context.fill();
+    this.context.save();
+    this.context.fillStyle = "blue";
+    this.context.beginPath();
+    this.context.arc(150, 50, 30, 0, 2 * Math.PI);
+    this.context.fill();
 
 
-    context.restore();
-    context.beginPath();
-    context.arc(250, 50, 30, 0, 2 * Math.PI);
-    context.fill();
+    this.context.restore();
+    this.context.beginPath();
+    this.context.arc(250, 50, 30, 0, 2 * Math.PI);
+    this.context.fill();
 
   }
 }

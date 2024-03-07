@@ -8,6 +8,7 @@ import { DrawImageComponent } from './draw-image/draw-image.component';
 import { StateCanvasComponent } from './state-canvas/state-canvas.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { TransformationComponent } from './transformation/transformation.component';
+import { PhysicsAnimationComponent } from './physics-animation/physics-animation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TransformationComponent } from './transformation/transformation.compone
     DrawImageComponent,
     StateCanvasComponent,
     AnimationsComponent,
-    TransformationComponent
+    TransformationComponent,
+    PhysicsAnimationComponent
   ],
   imports: [
     BrowserModule,

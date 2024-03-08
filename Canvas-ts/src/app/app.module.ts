@@ -9,6 +9,7 @@ import { StateCanvasComponent } from './state-canvas/state-canvas.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { TransformationComponent } from './transformation/transformation.component';
 import { PhysicsAnimationComponent } from './physics-animation/physics-animation.component';
+import { VerticalProjectionComponent } from './vertical-projection/vertical-projection.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PhysicsAnimationComponent } from './physics-animation/physics-animation
     StateCanvasComponent,
     AnimationsComponent,
     TransformationComponent,
-    PhysicsAnimationComponent
+    PhysicsAnimationComponent,
+    VerticalProjectionComponent
   ],
   imports: [
     BrowserModule,

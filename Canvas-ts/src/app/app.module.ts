@@ -10,6 +10,8 @@ import { AnimationsComponent } from './animations/animations.component';
 import { TransformationComponent } from './transformation/transformation.component';
 import { PhysicsAnimationComponent } from './physics-animation/physics-animation.component';
 import { VerticalProjectionComponent } from './vertical-projection/vertical-projection.component';
+import { MomentumOneAxisComponent } from './momentum-one-axis/momentum-one-axis.component';
+import { MomentumTwoAxesComponent } from './momentum-two-axes/momentum-two-axes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { VerticalProjectionComponent } from './vertical-projection/vertical-proj
     AnimationsComponent,
     TransformationComponent,
     PhysicsAnimationComponent,
-    VerticalProjectionComponent
+    VerticalProjectionComponent,
+    MomentumOneAxisComponent,
+    MomentumTwoAxesComponent
   ],
   imports: [
     BrowserModule,

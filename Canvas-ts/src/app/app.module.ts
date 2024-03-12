@@ -12,6 +12,7 @@ import { PhysicsAnimationComponent } from './physics-animation/physics-animation
 import { VerticalProjectionComponent } from './vertical-projection/vertical-projection.component';
 import { MomentumOneAxisComponent } from './momentum-one-axis/momentum-one-axis.component';
 import { MomentumTwoAxesComponent } from './momentum-two-axes/momentum-two-axes.component';
+import { HandlingComponent } from './handling/handling.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MomentumTwoAxesComponent } from './momentum-two-axes/momentum-two-axes.
     PhysicsAnimationComponent,
     VerticalProjectionComponent,
     MomentumOneAxisComponent,
-    MomentumTwoAxesComponent
+    MomentumTwoAxesComponent,
+    HandlingComponent
   ],
   imports: [
     BrowserModule,

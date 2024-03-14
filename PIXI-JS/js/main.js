@@ -4,30 +4,28 @@ let keyDiv;
 
 window.onload = function() {
     console.log(PIXI); // Kiểm tra xem đối tượng PIXI có được xác định không
-    app = new PIXI.Application(
-        {
-            width: 800,
-            height: 600,
-            backgroundColor: 0xAAAAAA
-        }
-    ); 
+    app = new PIXI.Application({
+        width: 800,
+        height: 600,
+        backgroundColor: 0xAAAAAA
+    });
 
     document.body.appendChild(app.view);
-    
+
     // Đối tượng Player
     player = PIXI.Sprite.from("img/player.png");
     player.anchor.set(0.5);
     player.x = app.view.width / 2;
     player.y = app.view.height / 2;
     app.stage.addChild(player);
-    
-    
+
+
     window.addEventListener("keydown", keysDown);
     window.addEventListener("keyup", keysUp);
 
     // Loop trò chơi
     app.ticker.add(gameLoop);
-    keyDiv = document.querySelector("#key");    
+    keyDiv = document.querySelector("#key");
 }
 
 function keysDown(e) {
@@ -37,22 +35,20 @@ function keysDown(e) {
 
 function keysUp(e) {
     console.log(e.keyCode);
-    keys[e.keyCode] = false; 
+    keys[e.keyCode] = false;
 }
 
 function gameLoop() {
-    // keyDiv.innerHTML = JSON.stringify(keys);
-
-    if (keys[37]) { 
+    if (keys[37]) {
         player.x -= 5;
     }
-    if (keys[38]) { 
+    if (keys[38]) {
         player.y -= 5;
     }
-    if (keys[39]) { 
+    if (keys[39]) {
         player.x += 5;
     }
-    if (keys[40]) { 
+    if (keys[40]) {
         player.y += 5;
     }
 }

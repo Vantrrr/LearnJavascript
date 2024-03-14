@@ -10,7 +10,7 @@ window.onload = function() {
             height: 600,
             backgroundColor: 0xAAAAAA
         }
-    );
+    ); 
 
     document.body.appendChild(app.view);
     

@@ -1,0 +1,1 @@
+(()=>{const e=PIXI.Application,n=PIXI.Loader.shared,d=PIXI.Sprite,t=new e;document.body.appendChild(t.view),n.add("bunny.png").load(((e,n)=>{const a=new d(n["bunny.png"].texture);a.anchor.set(.5),a.x=t.screen.width/2,a.y=t.screen.height/2,t.stage.addChild(a)}))})();
